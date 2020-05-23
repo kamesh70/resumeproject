@@ -1,0 +1,27 @@
+{% extends 'core/base.html'%}
+{% load static %}
+
+{% block content %} 
+<div class= "mt-3">
+        <div class=" text-right">
+            <a href="{%url 'contact'%}" class="btn btn-info my-3 mr-5">Contact</a>
+        </div>
+      
+    <div class="mt-3 text-white mx-5 tex-justify ">
+        <h1 class="font-weight-bold  st-font">DataBase table </h1>
+        <table border="1">
+            <th>Name</th><th>Email</th><th>Subject</th><th> Message</th>
+            {% for item in all %}
+            
+           <tr> <td> {{ item.Name }} </td> <td> {{ item.emailin }} </td><td>{{ item.Subject }}</td><td>{{item.textmes}}</td> </tr>
+            
+            {% endfor %}
+        </table>
+        
+    </div>
+        
+</div>
+{% endblock content %}
+
+
+

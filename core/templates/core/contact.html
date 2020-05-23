@@ -1,0 +1,58 @@
+{% extends 'core/base.html'%}
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-warning mb-5 border-bottom">CONTACT US</h1>
+    <div class="row text-white mb-5" >
+        <p class="mx-auto mb-5"> DO you have any Questions?  to any kelmvvemlekgrrgjjrklmrlm
+            gkrgnrkgnrgngrkgnrkgnrk
+            egnk
+        </p>
+            <div class="col-sm-9 mb-5" >
+                <form method="POST" action="{% url 'contact' %}" >
+                    {% csrf_token %}
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputName">Your Name</label>
+                            <input type="text" class="form-control" name="Name" />
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail">Your Mail_id</label>
+                            <input type="email" class="form-control" name="emailin"  />
+                        </div>
+                    </div>
+                        <div class="form-group">
+                            <label for="inputSubject">Your Subject</label>
+                            <input type="text" class="form-control" name="Subject"  />
+                        </div>
+                        <div class="mb-3">
+                            <label for="inputTextarea">Your Message *</label> 
+                            <textarea  class="form-control" name="textmes" requried></textarea>
+                        </div>
+                        <button class="btn btn-primary" type="submit">Send</button>
+                </form>
+            </div>
+            <div class="col-sm-3 text-center">
+                <ul class="list-unstyled">
+                    <li>
+                        <i class="fas fa-search-location fa-2x i-color"></i>
+                        <p>Jalgaon ,Maharashtra,INDIA</p>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone fa-2x mx-4 i-color"></i>
+                        <p>+ 7058395932</p>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone fa-2x mx-4 i-color"></i>
+                        <p>Contact@gmail.com</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+</div>
+            <div class="text-center">
+                <a href="#" target="_black"><i class="fab fa-twitter i-color mr-3"></i></a>
+                <a href="#" target="_black"><i class="fas fa-phone i-color mr-3"></i></a>
+                <a href="#" target="_black"><i class="fab fa-twitter i-color mr-3"></i></a>
+                 <a href="#" target="_black"><i class="fab fa-twitter i-color mr-3"></i></a>
+            </div>
+{% endblock content%}
